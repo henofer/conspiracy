@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "80kb";
+    src: url("fonts/80-kb-Sharp.woff") format("woff");
+}
+
+@font-face {
+    font-family: "lieblingM";
+    src: url("fonts/Liebling-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "lieblingL";
+    src: url("fonts/Liebling-Light.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000657;
+}
+
+.sidebar-title {
+    font-family: "dystopian", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.frame {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-family: "dystopian", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 45px;
+    color: #002be8;
+}
+
+.figurs {
+    font-family: "gopher", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 58px;
+    color: #dc5761;
+}
+
+.spin {
+    font-size: "gopher";
+    font-size: 30px;
+    color: #bce9df;
+}
+
+h1 {
+    font-family: gopher, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 120px;
+    color: white;
+}
+
+h5 {
+    color: white;
+    font-family: "80kb";
+    font-size: 25px;
+}
+
+h2 {
+    color: white;
+    font-family: "lieblingM";
+    font-size: 35px;
+}
+
+h3 {
+    color: white;
+    font-family: gopher, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 62px;
+}
+
+h4{
+    font-family: "dystopian", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 128px;
+    color: #bce9df;
+}
+
+p {
+    color: white;
+    font-family: "lieblingL";
+    font-size: 29px;
+}
+
+h6 {
+    font-family: "dystopian", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 128px;
+    color: #f2bbfa;
+}
+
+
+
+#main {
+    display: flex;
+    /* max-height: 200px; */
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 54px;
+    --move-initial: calc( -50% + var(--offset));
+    --move-final: calc( -25% + var(--offset));
+}
+
+.marquee-inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    font-family: "80kb";
+    font-size: 25px;
+    padding: 0 20px;
+    color: white;
+}
+
+/* .marquee:hover .marquee-inner {
+    animation-play-state: paused;
+} */
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+.sidebar {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   margin-left: 90px;
+}
+
+.earthicon {
+    max-width: 17.185%;
+}
